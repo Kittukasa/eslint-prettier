@@ -14,6 +14,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
+      "eslint --max-warnings=0",
       "prettier --write"
     ],
     "*.{json,md,css}": [
