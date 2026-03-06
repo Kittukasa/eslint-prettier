@@ -8,15 +8,16 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --max-warnings=0",
-      "prettier --check"
+      "eslint --fix",
+      "prettier --write"
     ],
     "*.{json,md,css}": [
-      "prettier --check"
+      "prettier --write"
     ]
   },
   "keywords": [],
@@ -27,7 +28,8 @@
     "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.1",
-    "lint-staged": "^15.0.0"
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.8.1"
   }
 }
