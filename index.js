@@ -1,16 +1,16 @@
 // Fixed code for ESLint + Prettier testing
 
-const firstName = "Alice";
-const lastName = "Smith";
+const firstName = 'Alice';
+const lastName = 'Smith';
 
 // Fixed function formatting
 function greetUser(name, age) {
-  if (age === "18") {
-    return "Welcome " + name + " you are 18";
-  } else if (age === "21") {
-    return "Welcome " + name + " you are 21";
+  if (age === '18') {
+    return 'Welcome ' + name + ' you are 18';
+  } else if (age === '21') {
+    return 'Welcome ' + name + ' you are 21';
   } else {
-    return "Welcome " + name;
+    return 'Welcome ' + name;
   }
 }
 
@@ -34,7 +34,7 @@ class Animal {
   }
 
   isAdult() {
-    if (this.age === "adult") {
+    if (this.age === 'adult') {
       return true;
     } else {
       return false;
@@ -43,23 +43,23 @@ class Animal {
 
   makeSound(sound) {
     if (sound === null) {
-      return "No sound";
+      return 'No sound';
     } else {
-      return this.name + " says " + sound;
+      return this.name + ' says ' + sound;
     }
   }
 }
 
 // Fixed array formatting
 const animals = [
-  "dog",
-  "cat",
-  "bird",
-  "fish",
-  "rabbit",
-  "hamster",
-  "turtle",
-  "snake",
+  'dog',
+  'cat',
+  'bird',
+  'fish',
+  'rabbit',
+  'hamster',
+  'turtle',
+  'snake',
 ];
 
 const upperAnimals = animals.map(function (animal) {
@@ -72,11 +72,11 @@ const shortAnimals = animals.filter(function (animal) {
 
 // Fixed object formatting
 const userProfile = {
-  firstName: "Alice",
-  lastName: "Smith",
+  firstName: 'Alice',
+  lastName: 'Smith',
   age: 25,
-  email: "alice@example.com",
-  role: "admin",
+  email: 'alice@example.com',
+  role: 'admin',
   isActive: true,
   loginCount: 0,
 };
@@ -89,7 +89,7 @@ async function getData(id) {
     } else if (id === 0) {
       return null;
     } else {
-      const data = { id: id, name: "Alice", email: "alice@example.com" };
+      const data = { id: id, name: 'Alice', email: 'alice@example.com' };
       return data;
     }
   } catch (error) {
@@ -100,30 +100,30 @@ async function getData(id) {
 // Fixed switch statement
 function getAnimalSound(animal) {
   switch (animal) {
-    case "dog":
-      return "woof";
-    case "cat":
-      return "meow";
-    case "bird":
-      return "tweet";
-    case "fish":
-      return "blub";
+    case 'dog':
+      return 'woof';
+    case 'cat':
+      return 'meow';
+    case 'bird':
+      return 'tweet';
+    case 'fish':
+      return 'blub';
     default:
-      return "unknown";
+      return 'unknown';
   }
 }
 
 // Call functions
-const cat = new Animal("Cat", "mammal", "adult", "black");
-const result = greetUser(firstName, "18");
+const cat = new Animal('Cat', 'mammal', 'adult', 'black');
+const result = greetUser(firstName, '18');
 const details = cat.getDetails();
-const sound = cat.makeSound("meow");
+const sound = cat.makeSound('meow');
 const isAdult = cat.isAdult();
 
 getData(1);
 
-const dogSound = getAnimalSound("dog");
-const fullName = firstName + " " + lastName;
+const dogSound = getAnimalSound('dog');
+const fullName = firstName + ' ' + lastName;
 const profile = userProfile;
 
 export {
